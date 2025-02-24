@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>VOUVI</title>
+  </head>
+
+  <body class="dark">
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+    <script
+      src="https://cdn.userway.org/widget.js"
+      data-account="EOEUz1MMRU"
+      data-position="3"
+    ></script>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <button
+      id="openModalBtn"
+      class="fixed bottom-0 right-0 m-5 h-16 w-16 rounded-full bg-[#7C20BE80] text-black transition"
+    >
+      <img src="src/assets/images/IA Fin.svg" alt="Fin IA" />
+    </button>
+
+    <!-- O Modal -->
+    <div
+      id="myModal"
+      class="fixed inset-0 z-50 flex hidden h-full w-full items-center justify-center overflow-y-hidden bg-white/50 backdrop-blur-[25px] dark:bg-black/50"
+    >
+      <div class="h-[90vh] w-11/12 xs:w-10/12 sm:w-9/12 lg:w-3/6 xl:w-5/12">
+        <span id="closeModalBtn" class="absolute"></span>
+        <iframe
+          class="rounded-md"
+          src="https://copilotstudio.microsoft.com/environments/Default-6f9e3b1e-1809-444a-81d3-82d40a928812/bots/cr747_fin4_ymBK/webchat?__version__=2"
+          frameborder="0"
+          style="width: 100%; height: 100%"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      // Obtendo os elementos
+      const modal = document.getElementById("myModal");
+      const openModalBtn = document.getElementById("openModalBtn");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+
+      // Quando o usuário clica no botão, o modal é exibido
+      openModalBtn.onclick = function () {
+        modal.classList.remove("hidden");
+      };
+
+      // Quando o usuário clica no botão de fechar, o modal é fechado
+      closeModalBtn.onclick = function () {
+        modal.classList.add("hidden");
+      };
+
+      // Quando o usuário clica fora do modal, ele também é fechado
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
+</html>

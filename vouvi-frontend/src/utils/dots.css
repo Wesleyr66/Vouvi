@@ -1,0 +1,37 @@
+.slick-dots li button:before {
+  color: #007FFF; /* Cor dos dots inativos */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFB120; /* Cor dos dots ativos */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px; /* Tamanho das setas */
+  color: #02020B; /* Cor das setas em tema claro */
+}
+
+/* Para quando o dark mode for ativado */
+body.dark .slick-prev:before,
+body.dark .slick-next:before {
+  color: #F5F5F4; /* Cor das setas em tema escuro */
+}
+@media (max-width: 480px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none; /* Esconde as setas em telas menores */
+  }
+}
+@media (min-width: 800px) and (max-width: 980px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none; /* Esconde as setas em telas menores */
+  }
+}
+@media (min-width: 1280px) and (max-width: 1420px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none; /* Esconde as setas em telas menores */
+  }
+}
